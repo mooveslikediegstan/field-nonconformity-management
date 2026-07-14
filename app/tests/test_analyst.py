@@ -2,7 +2,7 @@
 from datetime import date
 from typing import Optional
 import pytest
-from backend.app.models.analyst import Analyst
+from backend.models.analyst import Analyst
 
 @pytest.fixture
 def valid_analyst():
