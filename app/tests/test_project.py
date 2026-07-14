@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import pytest
-from backend.app.models.project import Project
+from backend.models.project import Project
 
 @pytest.fixture
 def valid_project():

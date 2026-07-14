@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from backend.app.models.city import City
+from backend.models.city import City
 import pytest
 
 @pytest.fixture

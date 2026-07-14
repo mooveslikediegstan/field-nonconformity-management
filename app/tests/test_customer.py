@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import pytest
-from backend.app.models.customer import Customer
+from backend.models.customer import Customer
 
 @pytest.fixture
 def valid_customer():
