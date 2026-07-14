@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 import os
 from urllib.parse import quote_plus
 from dotenv import load_dotenv
@@ -21,12 +22,11 @@ engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 class Base(DeclarativeBase):
-    pass
+    pass 
 
 def get_db():
     """
     Gerador de sessão para injeção de dependência no FastAPI.
-    Equivalente ao seu Z_DatabaseConnection.bas — abre e fecha conexão.
     """
     db = SessionLocal()
     try:

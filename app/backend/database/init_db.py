@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from backend.app.database.session import engine, Base
-from backend.app.database import orm_models  # garante que os models são registrados
+from backend.database.session import engine, Base
+from backend.database import orm_models  # garante que os models são registrados
 
 def init_db():
     Base.metadata.create_all(bind=engine)
