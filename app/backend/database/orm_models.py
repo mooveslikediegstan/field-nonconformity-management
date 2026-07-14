@@ -15,6 +15,17 @@ class CityORM(Base):
     geolocation_lat  = Column(Float, nullable=False)
     geolocation_lon  = Column(Float, nullable=False)
 
+class AnalystORM(Base):
+    __tablename__ = "analyst"
+
+    analyst_id      = Column(Integer, primary_key=True, autoincrement=True)
+    analyst_name    = Column(String, nullable=False)
+    email           = Column(String, nullable=False, unique=True)
+    contact         = Column(String, nullable=False)
+    creation_date   = Column(Date, nullable=False)
+    status          = Column(String, nullable=False, default="active")
+    valid_to_date   = Column(Date, nullable=True)
+
 
 class CustomerORM(Base):
     __tablename__ = "customer"
