@@ -50,10 +50,10 @@ def test_empty_title_should_fail(valid_nonconformity):
 
 def test_invalid_status_should_fail(valid_nonconformity):
     with pytest.raises(ValueError, match="Status invalido"):
-        make_analyst(valid_nonconformity, status="Recebimento de Carga")
+        make_analyst(valid_nonconformity, project_status="Recebimento de Carga")
 
-def test_all_valid_statuses_are_accepted(valid_analyst):
+def test_all_valid_statuses_are_accepted(valid_nonconformity):
     for status in ["Montagem","Garantia"]:
-        a = make_analyst(valid_analyst, status=status)
-        assert a.status == status
+        a = make_analyst(valid_nonconformity, project_status=status)
+        assert a.project_status == status
 
