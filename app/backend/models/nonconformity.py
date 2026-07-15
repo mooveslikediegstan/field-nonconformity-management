@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional,List
 from datetime import date
 
 PROJECT_STATUS = ["Montagem","Garantia"]
@@ -15,7 +15,7 @@ class NonConformity():
     creation_date:date
     project_id: str
     project_status: str    
-    components: list = field(default_factory=list)
+    components: Optional[List] = field(default_factory=list)
     nonconformity_id: Optional[int] = None
 
     def __post_init__(self):
